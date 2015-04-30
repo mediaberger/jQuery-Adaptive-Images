@@ -1,0 +1,132 @@
+// Responsive breakpoints
+// ------------------------------------------------
+
+@screen-xs:				0px;
+@screen-sm:				768px;
+@screen-md:				992px;
+@screen-lg:				1200px;
+
+@media-xs-min:			@screen-xs;
+@media-xs-max:			(@screen-sm - 1);
+@media-sm-min:			@screen-sm;
+@media-sm-max:			(@screen-md - 1);
+@media-md-min:			@screen-md;
+@media-md-max:			(@screen-lg - 1);
+@media-lg-min:			@screen-lg;
+
+
+// Typography
+// ------------------------------------------------
+
+@default-font:			Open Sans;
+@default-fonturl:		"../fonts/opensans-light-webfont";
+//@default-fonturl:		"./wwwres/fonts/opensans-light-webfont";,
+@default-fontbase:		10px; //62.5%;
+@default-fontsize:		1.6rem;
+
+@font-size-default:		@default-fontsize;
+@font-size-large:		(@default-fontsize * 1.25);
+@font-size-small:		(@default-fontsize * 0.85);
+
+@font-size-h1:			(@default-fontsize * 3);
+@font-size-h2:			(@default-fontsize * 2.15);
+@font-size-h3:			(@default-fontsize * 1.7);
+@font-size-h4:			(@default-fontsize * 1.25);
+@font-size-h5:			(@default-fontsize * 1.1);
+@font-size-h6:			(@default-fontsize * 1);
+
+@default-lineheight:	(20 / 14);
+@default-fontweight:	200;
+@fontweight-bold:   	600;
+
+@default-spacing:       @default-lineheight * @default-fontsize;
+
+
+// Components
+// ------------------------------------------------
+
+@default-margin:        @default-spacing;
+@margin-xs:	        	@default-margin * 1;
+@margin-sm:	        	@default-margin * 2;
+@margin-md:	        	@default-margin * 3;
+@margin-lg:	        	@default-margin * 4;
+
+@default-border:		20px;
+@border-xs:     		20px;
+@border-sm:	        	40px;
+@border-md:	        	60px;
+@border-lg:	        	80px;
+
+@default-radius:		3px;
+
+
+// Grid
+// ------------------------------------------------
+
+@grid-columns:          6;
+@grid-column-padding:   0px;
+@grid-float-breakpoint: 768px;
+
+
+// Colors
+// ------------------------------------------------
+
+@layout-color-default:	#f7f7f7;
+@layout-color-1:		#202C3C;
+@layout-color-2:		#C61934;
+@layout-color-3:		#fff;
+@layout-color-4:		darken(@layout-color-default, 2%);
+
+@text-color-default:	#9a9a9a;
+@text-color-1:			#202C3C;
+@text-color-2:			#9a9a9a;
+@text-color-3:			#fff;
+@text-color-4:			#0074b8;
+
+@link-color-1:			@text-color-4;
+@link-color-1-hover: 	darken(@link-color-1, 20%);
+
+@link-color-2:			@link-color-1;
+@link-color-2-hover: 	#5b5b5b;
+
+@link-color-3:			#5b5b5b;
+@link-color-3-hover: 	@link-color-1;
+
+
+// Elements
+// ------------------------------------------------
+
+@header-height:			150px;
+@header-height-xs:		150px;
+@header-height-sm:		150px;
+@header-height-md:		150px;
+@header-height-lg:		180px;
+
+@footer-height:			100px;
+@footer-height-xs:		100px;
+@footer-height-sm:		100px;
+@footer-height-md:		100px;
+@footer-height-lg:		120px;
+
+@mainmenu-height:		50px;
+@mainmenu-height-xs:	50px;
+@mainmenu-height-sm:	50px;
+@mainmenu-height-md:	50px;
+@mainmenu-height-lg:	50px;
+
+@hero-height:			300px;
+@hero-height-xs:		300px;
+@hero-height-sm:		500px;
+@hero-height-md:		500px;
+@hero-height-lg:		600px;
+
+
+// OLD
+
+@baseFontSize: 16;
+@baseLineHeight: 1.5;
+
+@scale: 1;
+
+
+@default-content-width: 800px;

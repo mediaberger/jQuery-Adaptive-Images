@@ -1,7 +1,7 @@
-# jQuery Adaptive Images
-### [Project Page](http://jai.mediaberger.com)
+# ___name
+### [Project Page](___homepage)
 
-jQuery Adaptive Images is a jQuery plugin to serve images related to the parent element instead of display width.
+___description
 
 
 
@@ -11,7 +11,7 @@ After git checkout run
 ```
 npm install
 ```
-Now you can run the default **grunt**-task to build the jQuery Plugin `jquery.adaptive-images`.
+Now you can run the default **grunt**-task to build the jQuery Plugin `___textdomain`.
 
 
 
@@ -29,11 +29,11 @@ To detect if the Image is inside of the visible are, this plugin requires [jQuer
 
 ### Author & Copyright:
 
-Copyright (c) 2015, Christian Hockenberger
+Copyright (c) ___year, ___author
 
 
 
 ### License:
 
-GNU General Public License v2 or later
-http://www.gnu.org/licenses/gpl-2.0.html
+___license ___license_version
+___license_url

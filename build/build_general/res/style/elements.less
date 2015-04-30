@@ -1,0 +1,284 @@
+body,
+button,
+input,
+select,
+textarea {
+	font-family: "@{default-font}", sans-serif;
+    font-size: @default-fontsize;
+	line-height: @default-lineheight;
+	color: @text-color-default;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+}
+
+h1{
+    font-size: @font-size-h1;
+}
+h2{
+    font-size: @font-size-h2;
+}
+h3,
+.widget-title{
+    font-size: @font-size-h3;
+}
+h4{
+    font-size: @font-size-h4;
+}
+h5{
+    font-size: @font-size-h5;
+}
+h6{
+    font-size: @font-size-h6;
+}
+
+p {
+	margin-bottom: @default-spacing;
+}
+
+b,
+strong {
+	font-weight: @fontweight-bold;
+    html &{
+        font-weight: @fontweight-bold;
+    }
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 @default-spacing;
+}
+
+address {
+	margin: 0 0 @default-spacing;
+}
+
+pre {
+	background: @layout-color-default;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	margin-bottom: @default-spacing;
+	max-width: 100%;
+	overflow: auto;
+	padding: @default-spacing;
+    border-radius: @default-radius;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	background: @layout-color-default;
+    border-radius: @default-radius;
+}
+
+
+abbr,
+acronym {
+	border-bottom: 1px dotted @text-color-default;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	bottom: 1ex;
+}
+
+sub {
+	top: .5ex;
+}
+
+small {
+	font-size: 75%;
+}
+
+big {
+	font-size: 125%;
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ul,
+ol {
+	margin: 0 0 1.5em 3em;
+    padding-left: 24px;
+    li > &{
+        margin: 0;
+    }
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+
+dl{
+	margin-bottom: @default-spacing;
+}
+dt {
+	font-weight: @fontweight-bold;
+    html &{
+        font-weight: @fontweight-bold;
+    }
+}
+
+dd {
+	margin: 0 1.5em (@default-spacing / 2);
+    &:last-child{
+        margin: 0 1.5em 0;
+    }
+}
+
+
+img,
+figure,
+embed,
+iframe,
+object {
+    max-width: 100%;
+    height: auto;
+	margin: 0;
+}
+
+
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    border: @layout-color-4 1px solid;
+    margin-bottom: @default-spacing;
+    display: inline-block;
+    max-width: 100%;
+    & thead,
+    & tbody,
+    & tfooter{
+        max-width: 100%;
+    }
+    & thead{
+        background-color: fadeout(@layout-color-4, 25%);
+        text-align: left;
+        vertical-align: bottom;
+    }
+    & th,
+    & td{
+        padding: 0.5em 1em;
+        //border-left: @layout-color-4 1px solid;
+        border-width: 0 0 0 1px;
+        font-size: inherit;
+        margin: 0;
+        overflow: visible;
+        padding: .5em 1em;
+        &:first-child{
+            border-left-width: 0;
+        }
+    }
+    & th{
+        font-weight: @fontweight-bold;
+        html &{
+            font-weight: @fontweight-bold;
+        }
+    }
+    & tr{
+        border-bottom: @layout-color-4 1px solid;
+        &:nth-child(2n){
+            background-color: fadeout(@layout-color-4, 75%);
+        }
+        &:last-child{
+            border-bottom: 0px solid;
+        }
+    }
+}
+
+blockquote{
+    background-color: fadeout(@layout-color-4, 50%);
+    padding: @default-spacing;
+    margin-bottom: @default-spacing;
+    .m1-sm({
+        box-shadow: inset 2px 0 0 @text-color-4;
+    });
+    & p{
+        font-family: serif;
+        color: darken(@text-color-2, 10%);
+        font-size: 2rem;
+        line-height: 1.4;
+        margin: 0 !important;
+        max-width: none;
+    }
+    & footer{
+        padding: 10px 0;
+        font-style: italic;
+    }
+}
+q{
+    font-family: serif;
+    background-color: fadeout(@layout-color-4, 50%);
+    quotes: '\201C' '\201D' '\2018' '\2019';
+    color: darken(@text-color-2, 10%);
+    line-height: 1.1;
+    font-size: 2rem;
+    font-style: italic;
+    &:before{
+        content: open-quote;
+    }
+    &:after{
+        content: close-quote;
+    }
+    &+cite{
+        position: relative;
+        top: -1px;
+        padding-right: 10px;
+        background-color: fadeout(@layout-color-4, 50%);
+    }
+}
+cite{
+    font-style: italic;
+    &:before{
+        content: " \2014 \2009 ";
+    }
+}
+
+a{
+    color: @link-color-1;
+    text-decoration: underline;
+    &:hover,
+    &:focus,
+    &:active{
+        color: @link-color-1-hover;
+        text-decoration: none;
+    }
+}
+

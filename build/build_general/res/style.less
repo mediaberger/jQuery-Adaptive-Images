@@ -1,0 +1,39 @@
+@import "common/defaults.less";
+@import "common/mixins.less";
+
+@import "style/reset.less";
+@import "style/elements.less";
+@import "style/blocks.less";
+
+html{
+    font-size: @default-fontbase;
+    & *{
+        .font-smoothing();
+        font-weight: @default-fontweight;
+        &,
+        &::after,
+        &::before{
+            .border-box();
+        }
+    }
+}
+
+body{
+    background-color: @layout-color-default;
+}
+
+.page{
+    .boxed &{
+        .wrapper();
+    }
+}
+
+.wrapper{
+    .unboxed &{
+        .wrapper();
+    }
+}
+
+.democlass{
+    margin: 0 0 @default-spacing;
+}

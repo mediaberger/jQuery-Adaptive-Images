@@ -1,0 +1,38 @@
+# Ignore scattered _notes directories that Dreamweaver uses to keep track of its edits and concurrency
+*/_notes
+*/dwsync.xml
+[_]notes/
+dwsync.xml
+
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Windows Folder config file
+Desktop.ini
+
+# Windows Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+
+# OSX Temp Files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# OSX Thumbnails
+._*
+
+# OSX Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Project Structure
+node_modules/*
+ni/*
+dist/*
+examples/*
+documentation/*
+*.zip

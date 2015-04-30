@@ -1,0 +1,92 @@
+@import "defaults.less";
+
+// Mobile first
+.m1(@minWidth; @rules){
+    @media (min-width: @minWidth) {
+        @rules();
+    }
+}
+.m1-xs(@rules){
+	@rules();
+}
+.m1-sm(@rules){
+	.m1(@media-sm-min, @rules);
+}
+.m1-md(@rules){
+	.m1(@media-md-min, @rules);
+}
+.m1-lg(@rules){
+	.m1(@media-lg-min, @rules);
+}
+
+// Create Wrapper, Center Block, Grid and Clearfix
+.wrapper(){
+    width: @default-content-width;
+    max-width: 100%;
+    .center-block();
+}
+.center-block(){
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.make-row(){
+    margin-left: -@grid-column-padding;
+    margin-right: -@grid-column-padding;
+    .clearfix();
+}
+.make-column(@columns){
+    @media (min-width: @grid-float-breakpoint){
+        float: left;
+        width: percentage(@columns / @grid-columns);
+    }
+    min-height: 1px;
+    padding-left: @grid-column-padding;
+    padding-right: @grid-column-padding;
+}
+
+.make-column-offset(@columns){
+    @media (min-width: @grid-float-breakpoint){ margin-left: percentage(@columns / @grid-columns); }
+}
+.clearfix(){
+    &:before,
+    &:after{
+        content: " ";
+        display: table;
+    }
+    &:after{ clear: both; }
+}
+
+// Print
+.not-printable(){
+	@media print{ display: none; }
+}
+
+// Misc
+.font-smoothing(){
+    //-webkit-font-smoothing: subpixel-antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smooth: always;
+    text-rendering: optimizeLegibility;
+}
+.text-truncate(){
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.hide-text(){
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.border-box(){
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.content-box(){
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
