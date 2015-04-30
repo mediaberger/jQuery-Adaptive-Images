@@ -22,7 +22,6 @@
     $.extend( Plugin.prototype, {
         init: function() {
             this.collectItem();
-            window.chris = items;
         },
         collectItem: function() {
             if ( jQuery.inArray( this.element, items ) === -1 ) {
