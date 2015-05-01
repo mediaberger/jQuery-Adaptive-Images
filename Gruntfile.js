@@ -301,7 +301,6 @@ module.exports = function( grunt ) {
         "promo"
     ] );
 
-	//grunt.registerTask( "default", [ "dist" ] );
 	grunt.registerTask( "default", [ "dist" ] );
 
 };

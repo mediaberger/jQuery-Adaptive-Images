@@ -23,6 +23,9 @@
         init: function() {
             this.collectItem();
         },
+        update: function() {
+            this.collectItem();
+        },
         collectItem: function() {
             if ( jQuery.inArray( this.element, items ) === -1 ) {
                 items.push( this.element );
@@ -93,11 +96,11 @@
 
     $.fn[pluginName] = function( options ) {
         return this.each( function() {
-            $.data( this, "plugin_" + pluginName, new Plugin( this, options ) );
-
-            //if (!$.data(this, "plugin_" + pluginName)) {
-            //    $.data(this, "plugin_" + pluginName, new Plugin(this, options));
-            //}
+            if ( !$.data( this, pluginName ) ) {
+                $.data( this, pluginName, new Plugin( this, options ) );
+            } else {
+                $.data( this, pluginName ).update();
+            }
         } );
     };
 
