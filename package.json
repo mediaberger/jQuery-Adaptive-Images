@@ -22,7 +22,7 @@
 		"url": "https://github.com/mediaberger/jQuery-Adaptive-Images"
 	},
 	"bugs": {
-		"url": "https://github.com/mediaberger/jQuery-Adaptive-Images"
+		"url": "https://github.com/mediaberger/jQuery-Adaptive-Images/issues"
 	},
 	"main": "Gruntfile.js",
 	"private": false,
