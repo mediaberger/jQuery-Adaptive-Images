@@ -37,3 +37,23 @@ body{
 .democlass{
     margin: 0 0 @default-spacing;
 }
+
+.imagesgrid{
+    .make-row();
+
+    margin: 0 @margin-xs 0;
+    .m1-sm({
+        margin: 0 @margin-sm 0;
+    });
+    .m1-md({
+        margin: 0 @margin-md 0;
+    });
+    .m1-lg({
+        margin: 0 @margin-lg 0;
+    });
+
+    & div {
+        .make-column(2);
+        font-size: 0;
+    }
+}
