@@ -11,6 +11,23 @@
             $( "[data-___prefix]" ).___prefix();
         };
 
+    function isRetinaDisplay() {
+        if ( window.matchMedia ) {
+            var mq = window.matchMedia(
+                "only screen and (min--moz-device-pixel-ratio: 1.3), " +
+                "only screen and (-o-min-device-pixel-ratio: 2.6/2), " +
+                "only screen and (-webkit-min-device-pixel-ratio: 1.3), " +
+                "only screen  and (min-device-pixel-ratio: 1.3), " +
+                "only screen and (min-resolution: 1.3dppx)"
+            );
+            if ( mq && mq.matches || ( window.devicePixelRatio > 1 ) ) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+
     function Plugin ( element, options ) {
         this.element = element;
         this.settings = $.extend( {}, defaults, options );
@@ -71,6 +88,15 @@
             }
             if ( matches.length ) {
                 $match = matches.shift();
+                if ( isRetinaDisplay() ) {
+                    var $testRetina = matches[0];
+                    if (
+                        typeof $testRetina.data( "___prefix-retina" ) !== undefined &&
+                        $testRetina.data( "___prefix-width" ) === $match.data( "___prefix-width" )
+                    ) {
+                        $match = matches.shift();
+                    }
+                }
                 if ( $picture === false ) {
                     $picture = $( "<img>" );
                     $elm.after( $picture );
