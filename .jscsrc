@@ -1,4 +1,3 @@
 {
-	"preset": "jquery",
-	"excludeFiles": [ "dist" ]
+	"preset": "jquery"
 }
