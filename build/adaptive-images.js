@@ -8,7 +8,9 @@
         },
         items = [],
         doit = function() {
-            $( "[data-___prefix]" ).___prefix();
+            var settings = window.___prefixSettings || {};
+            console.log( settings );
+            $( "[data-___prefix]" ).___prefix( settings );
         };
 
     function isRetinaDisplay() {
@@ -65,6 +67,7 @@
                 $sources = $elm.find( "span" ),
                 $match = false,
                 $picture = $elm.next();
+            console.log( this );
             if ( $elm.data( "___prefix-id" ) ) {
                 elmId = $elm.data( "___prefix-id" );
             }
