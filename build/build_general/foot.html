@@ -7,5 +7,13 @@
         <script src="res/jquery.sonar.min.js"></script>
         <script src="res/___textdomain.js"></script>
 
+        <script>
+            $( document ).on( "jai", function() {
+                $( "img" ).load(function() {
+                    $( this ).addClass( "loaded" );
+                });
+            });
+        </script>
+
     </body>
 </html>

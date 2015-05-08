@@ -9,7 +9,6 @@
         items = [],
         doit = function() {
             var settings = window.___prefixSettings || {};
-            console.log( settings );
             $( "[data-___prefix]" ).___prefix( settings );
         };
 
@@ -67,7 +66,6 @@
                 $sources = $elm.find( "span" ),
                 $match = false,
                 $picture = $elm.next();
-            console.log( this );
             if ( $elm.data( "___prefix-id" ) ) {
                 elmId = $elm.data( "___prefix-id" );
             }
@@ -112,7 +110,7 @@
                 $picture.attr( "id", elmId );
                 $picture.attr( "title", elmTitle );
                 $picture.attr( "alt", elmAlt );
-                $picture.attr( "class", elmClass );
+                $picture.addClass( elmClass );
                 $picture.addClass( pluginClassName );
             } else {
                 if ( $picture ) {
