@@ -48,11 +48,16 @@
             if ( jQuery.inArray( this.element, items ) === -1 ) {
                 items.push( this.element );
                 var self = this;
-                $( this.element ).bind( "scrollin", function() {
-                    $( self.element ).unbind( "scrollin" );
+                if ( $( this.element ).data( "___prefix-lazy" ) ) {
+                    $( this.element ).bind( "scrollin", function() {
+                        $( self.element ).unbind( "scrollin" );
+                        items.splice( $.inArray( self.element, items ), 1 );
+                        self.doItem();
+                    } );
+                } else {
                     items.splice( $.inArray( self.element, items ), 1 );
                     self.doItem();
-                } );
+                }
             }
         },
         doItem: function() {
